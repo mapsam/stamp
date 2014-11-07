@@ -23,5 +23,6 @@ stamp.month_a(date);    // Nov
 stamp.ordinal(date);    // 7th
 stamp.time(date);       // 2:47pm
 stamp.time_sec(date);   // 2:47:38
+stamp.military(date);   // 14:47:38
 stamp.date(date);       // 10/7/2014
 ```
