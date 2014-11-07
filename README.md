@@ -5,13 +5,13 @@ Series of functions to nicely format your timestamp.
 
 # Usage
 
-**Include stamp.js**
+Include stamp.js
 
 ```HTML
 <script src="stamp.js"></script>
 ```
 
-**Use `stamp` with a `Date()` object to return nice formats
+Use `stamp` with a `Date()` object to return nice formats
 
 ```JS
 var date = new Date();
