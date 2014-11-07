@@ -14,7 +14,7 @@ Include stamp.js
 Use `stamp` with a `Date()` object to return nice formats
 
 ```JS
-var date = new Date();
+var date = new Date();  // Fri Nov 07 2014 14:47:38 GMT-0800
 
 stamp.weekday(date);    // Friday
 stamp.weekday_a(date);  // Fri

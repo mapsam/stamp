@@ -43,7 +43,7 @@ var stamp = (function() {
   function timebuild(d) {
     var hrs = d.getHours(),
         mins = d.getMinutes();
-    var timestring =  ((hrs < 10)?"0":"") + ((hrs>12)?(hrs-12):hrs) + ":"; // hours
+    var timestring =  ((hrs < 10)? "0" : "") + ((hrs>12)?(hrs-12):hrs) + ":"; // hours
     timestring += ((mins < 10)?"0":"") + mins; // minutes
     return timestring;
   }
@@ -58,6 +58,15 @@ var stamp = (function() {
     var ampm = ((hrs>12)?('pm'):'am'); // pm
     return ampm;
   }
+  function military(d) {
+    var hrs = d.getHours(),
+        mins = d.getMinutes(),
+        sec = d.getSeconds();
+    var timestamp = ((hrs<10) ? "0" : "") + hrs + ":";
+    timestamp += ((mins < 10) ? "0" : "") + mins + ":";
+    timestamp += ((sec < 10?"0":"")+sec)
+    return timestamp;
+  }
   function date(d) {
     return d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear();
   }
@@ -70,6 +79,7 @@ var stamp = (function() {
     ordinal: ordinal,
     time: time,
     time_sec: time_sec,
-    date: date
+    military: military,
+    date: date,
   }
 })();
